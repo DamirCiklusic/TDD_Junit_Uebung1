@@ -9,8 +9,14 @@
     <version>1.0-SNAPSHOT</version>
 
     <properties>
-        <maven.compiler.source>15</maven.compiler.source>
-        <maven.compiler.target>15</maven.compiler.target>
+        <!-- By default your version of Maven might use an old version of the maven-compiler-plugin
+        that is not compatible with Java 9 or later versions.
+        To directly target your installed Java version add the version to properties maven.compiler.source and maven.compiler.target
+        -->
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
+        <!-- You can define version properties here that can be further used in the pom.xml -->
+        <junitVersion>5.7.1</junitVersion>
     </properties>
 
     <dependencies>
@@ -29,6 +35,7 @@
             <version>5.7.1</version>
             <scope>test</scope>
         </dependency>
+
 
     </dependencies>
 
